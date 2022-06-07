@@ -5,4 +5,5 @@ channels:
 dependencies:
   - python=3.9
   - jupyter-book
+  - matplotlib
 prefix: /Users/pgierz/opt/miniconda3/envs/awiesm_docs
