@@ -4,6 +4,9 @@
 format: jb-book
 root: intro
 parts:
+  - caption: Overview
+    chapters:
+    - file: notation
   - caption: General Tutorials
     chapters:
       - file: general_tutorials_overview
