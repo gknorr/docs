@@ -3,7 +3,29 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: General Tutorials
+    chapters:
+      - file: general_tutorials_overview
+        sections:
+  #       - file: shell_basics
+  #       - file: module_files
+  #       - file: git_and_version_control
+        - file: direnv
+  # - caption: Runtime Tutorials
+  #   chapters:
+  #     sections:
+  #       - file: preliminaries
+  #       - file: compiling
+  #       - file: setting_up_a_preindustrial_run
+  #       - file: changing_ghg_and_orbit
+  #       - file: changing_ice_sheets_and_landsea_mask
+  # - caption: Analysis Tutorials
+  - caption: Technical Documentation
+    chapters: 
+    - file: technical_links_awiesm_2.1
+  - caption: Contribution to the Documentation
+    chapters:
+    - file: markdown
+    - file: notebooks
+    - file: markdown-notebooks
