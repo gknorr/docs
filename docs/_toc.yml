@@ -30,5 +30,7 @@ parts:
   - caption: Contribution to the Documentation
     chapters:
     - file: markdown
-    - file: notebooks
-    - file: markdown-notebooks
+    # NOTE(PG): Disable notebooks for now, they seem to interfere with
+    # comments...?
+    # - file: notebooks
+    # - file: markdown-notebooks
