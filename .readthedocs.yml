@@ -11,6 +11,7 @@ build:
     post_build:
       # Print out the log file from readthedocs build; to ensure you can see what is happening.
       - "pwd"
+      - "ls"
       - "echo 'Here are all the log files: ./docs/_build/html/reports/'"
       - "ls ./docs/_build/html/reports/"
       - "for f in ./docs/_build/html/reports; do; echo $f; cat $f; done"
