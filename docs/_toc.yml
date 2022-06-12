@@ -15,6 +15,9 @@ parts:
   #       - file: module_files
   #       - file: git_and_version_control
         - file: direnv
+  - caption: Your First Pre-Industrial Run
+    chapters:
+      - file: first_pi_awiesm_2p1 
   # - caption: Runtime Tutorials
   #   chapters:
   #     sections:
@@ -30,7 +33,5 @@ parts:
   - caption: Contribution to the Documentation
     chapters:
     - file: markdown
-    # NOTE(PG): Disable notebooks for now, they seem to interfere with
-    # comments...?
-    # - file: notebooks
-    # - file: markdown-notebooks
+    - file: notebooks
+    - file: markdown-notebooks

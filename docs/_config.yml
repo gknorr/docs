@@ -19,6 +19,10 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+sphinx:
+  extra_extensions:
+    - sphinxcontrib.youtube
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/awi-esm/docs # Online location of your book

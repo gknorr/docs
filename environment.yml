@@ -6,4 +6,6 @@ dependencies:
   - python=3.9
   - jupyter-book
   - matplotlib
+  - pip:
+    - sphinxcontrib-youtube
 prefix: /Users/pgierz/opt/miniconda3/envs/awiesm_docs

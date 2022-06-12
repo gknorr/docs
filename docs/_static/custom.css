@@ -1,0 +1,14 @@
+/* AWI Colors:
+AWI_EisBlau: rgb(0, 172, 229) 
+AWI_TiefBlau: rgb(0, 65, 110)
+AWI_Grau-1: rgb(75, 75, 75)
+AWI_Grau-2: rgb(188, 189, 191)
+*/
+:root {
+  --sd-color-card-header: rgb(0, 172, 229);
+  --sd-color-card-background: rgb(0, 172, 229);
+}
+
+code {
+  color: rgb(75, 75, 75);
+}
