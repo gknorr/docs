@@ -30,8 +30,8 @@ parts:
   - caption: Technical Documentation
     chapters: 
     - file: technical_links_awiesm_2.1
-  # - caption: Contribution to the Documentation
-  #   chapters:
-  #   - file: markdown
+  - caption: Contribution to the Documentation
+    chapters:
+    - file: markdown
   #   - file: notebooks
   #   - file: markdown-notebooks
