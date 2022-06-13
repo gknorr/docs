@@ -33,5 +33,5 @@ parts:
   - caption: Contribution to the Documentation
     chapters:
     - file: markdown
-  #   - file: notebooks
-  #   - file: markdown-notebooks
+    - file: notebooks
+    - file: markdown-notebooks

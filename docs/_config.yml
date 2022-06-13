@@ -9,6 +9,7 @@ logo: logo.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  timeout: -1
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -22,6 +23,11 @@ bibtex_bibfiles:
 sphinx:
   extra_extensions:
     - sphinxcontrib.youtube
+  recursive_update: true
+  config:
+    copybutton_prompt_text: 'r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "'
+    copybutton_prompt_is_regexp: True
+
 
 # Information about where the book exists on the web
 repository:
