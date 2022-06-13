@@ -4,6 +4,8 @@ build:
   os: ubuntu-22.04
   tools:
     python: "mambaforge-4.10"
+  commands:
+    - "jupyter-book build docs || cat ./docs/_build/html/reports/notebooks.log"
   jobs:
     pre_build:
       # Generate the Sphinx configuration for this Jupyter Book so it builds.
