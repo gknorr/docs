@@ -291,3 +291,15 @@ $ which python
 /global/AWIsoft/miniconda/4.10.3/bin/python
 ```
 ````
+
+```{raw} html
+<script
+   type="text/javascript"
+   src="https://utteranc.es/client.js"
+   async="async"
+   repo="awi-esm/docs"
+   issue-term="pathname"
+   label="💬 comment"
+   crossorigin="anonymous"
+/>
+```
