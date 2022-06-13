@@ -120,8 +120,9 @@ This can be safely ignored.
 
 ## Basic Usage of `direnv`
 
-
-**VIDEO**
+```{eval-rst}
+..  youtube:: OCBBqLwLeUc
+```
 
 We will start with a basic demonstration of the `direnv` program. This is the
 same regardless of the machine you are on.
