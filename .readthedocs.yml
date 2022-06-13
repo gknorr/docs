@@ -11,8 +11,7 @@ build:
     post_build:
       # Print out the log file from readthedocs build; to ensure you can see what is happening.
       - "ls"
-      - "echo 'Here are all the log files: ./docs/_build/html/reports/'"
-      - "for f in $(ls ./docs/_build/html/reports); do echo $f; cat $f; done"
+      - "find ./docs/_build/html/reports -type f | xargs tail -n +1"
 
 conda:
   environment: environment.yml
