@@ -11,7 +11,7 @@ build:
     post_build:
       # Print out the log file from readthedocs build; to ensure you can see what is happening.
       - "ls"
-      - "find ./docs/_build/html/reports -type f | xargs tail -n +1"
+      - "find . -type f | xargs tail -n +1"
 
 conda:
   environment: environment.yml
