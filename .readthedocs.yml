@@ -4,32 +4,19 @@ build:
   os: ubuntu-22.04
   tools:
     python: "mambaforge-4.10"
-  commands:
-    - "jupyter-book config sphinx docs/"
-    - "pwd"
-    - "ls"
-    - "echo 'Here are all the log files: ./docs/_build/html/reports/'"
-    - "ls ./docs/_build/html/reports/"
-    - "jupyter-book build docs || cat ./docs/_build/html/reports/notebooks.log"
-    - "pwd"
-    - "ls"
-    - "echo 'Here are all the log files: ./docs/_build/html/reports/'"
-    - "ls ./docs/_build/html/reports/"
-  # jobs:
-  #   pre_build:
-  #     # Generate the Sphinx configuration for this Jupyter Book so it builds.
-  #     - "jupyter-book config sphinx docs/"
-  #   post_build:
-  #     # Print out the log file from readthedocs build; to ensure you can see what is happening.
-  #     - "pwd"
-  #     - "ls"
-  #     - "echo 'Here are all the log files: ./docs/_build/html/reports/'"
-  #     - "ls ./docs/_build/html/reports/"
-  #     - "for f in ./docs/_build/html/reports; do; echo $f; cat $f; done"
+  jobs:
+    pre_build:
+      # Generate the Sphinx configuration for this Jupyter Book so it builds.
+      - "jupyter-book config sphinx docs/"
+    post_build:
+      # Print out the log file from readthedocs build; to ensure you can see what is happening.
+      - "ls"
+      - "echo 'Here are all the log files: ./docs/_build/html/reports/'"
+      - "for f in ./docs/_build/html/reports; do; echo $f; cat $f; done"
 
 conda:
   environment: environment.yml
 
 sphinx:
   builder: html
-  fail_on_warning: true
+  fail_on_warning: false
