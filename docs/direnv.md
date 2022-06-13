@@ -21,11 +21,14 @@ video guide as well as text documentation is provided.
 ``````{tab-set}
 `````{tab-item} DKRZ Levante
 
-**VIDEO WILL GO HERE**
-
 ```{note}
 These instructions are specific to DKRZ's Levante System!
 ```
+
+```{eval-rst}
+..  youtube::  L52Qn9sU3sQ
+```
+
 Enable additional module files stored under ``/work/ab0246/AWImodules`` by adding the following to your ``.bashrc`` or ``.bash_profile``:
 
 ````{card}
@@ -287,12 +290,3 @@ $ which python
 /global/AWIsoft/miniconda/4.10.3/bin/python
 ```
 ````
-
-## Usage of `direnv` in the `esm-tools` context
-
-
-
-
-
-
-
