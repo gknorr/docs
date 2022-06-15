@@ -1,4 +1,5 @@
 # Using `direnv`: Specifications for per-directory environments
+
 ```{article-info}
 :avatar: https://secure.gravatar.com/avatar/709ea66dc102e6bc4547032f85ff6c95 
 :avatar-link: mailto:paul.gierz@awi.de 
@@ -18,29 +19,34 @@ video guide as well as text documentation is provided.
 
 ## Setting up `direnv`
 
-``````{tab-set}
-`````{tab-item} DKRZ Levante
+```{important}
+The example files for `.bash_profile` and `.bashrc` are considerably reduced in
+these examples. You may have much more customization in your own files.
+```
 
-```{note}
+```````{tab-set}
+``````{tab-item} DKRZ Levante
+`````{note}
 These instructions are specific to DKRZ's Levante System!
-```
-
-```{eval-rst}
+`````
+`````{eval-rst}
 ..  youtube::  L52Qn9sU3sQ
-```
-
+`````
 Enable additional module files stored under ``/work/ab0246/AWImodules`` by adding the following to your ``.bashrc`` or ``.bash_profile``:
 
 ````{card}
-`${HOME}/.bashrc` or `${HOME}/.bash_profile`
+{fas}`fa-file-code` File: `${HOME}/.bashrc` or `${HOME}/.bash_profile`
 ^^^
 ```diff
 #!/bin/bash
 
 + module use /work/ab0246/AWImodules 
 ```
+```{warning}
+This is a noteable difference to the setup procedure on Ollie, where this step
+is **not needed**.
+```
 ````
-
 Load the module for ``direnv``, this can be done by default by adding the following to ``.bashrc`` or ``.bash_profile``:
 ````{card}
 `${HOME}/.bashrc` or `${HOME}/.bash_profile`
@@ -67,7 +73,6 @@ module load utils/direnv
 ```{hint}
 This is not limited to ``bash``, but can also be done for [other shells](https://direnv.net/docs/hook.html).
 ```
-
 Finally, you will need to either log out and in again, or source your configuration file:
 ````{card}
 Terminal
@@ -77,9 +82,18 @@ $ source ${HOME}/.bash_profile
 $ source ${HOME}/.bashrc
 ```
 ````
+``````
 
-`````
-`````{tab-item} AWI Ollie
+
+
+
+
+
+
+
+
+
+``````{tab-item} AWI Ollie
 ```{note}
 These instructions are specific to AWI's Ollie System!
 ```
@@ -87,45 +101,71 @@ These instructions are specific to AWI's Ollie System!
 ..  youtube:: VCbBMcDQBSI
 ```
 Load the module for ``direnv``, this can be done by default by adding the following to ``.bashrc`` or ``.bash_profile``:
+
+````{card}
+`${HOME}/.bashrc` or `${HOME}/.bash_profile`
+^^^
 ```diff
 #!/bin/bash
 
 + module load direnv
 ```
+
+```{warning}
+This is different from Levante! You **do not** need to include a `module use` statement on Ollie.
+```
+
+
+````
+
 Enable the integration with your shell
+````{card}
+`${HOME}/.bashrc` or `${HOME}/.bash_profile`
+^^^
 ```diff
 #!/bin/bash
 
 module load utils/direnv
 + eval "$(direnv hook bash)"
 ```
+````
 ```{hint}
 This is not limited to ``bash``, but can also be done for [other shells](https://direnv.net/docs/hook.html).
 ```
 
 Finally, you will need to either log out and in again, or source your configuration file:
+
+````{card}
+Terminal
+^^^
 ```
 $ source ${HOME}/.bash_profile
 $ source ${HOME}/.bashrc
 ```
-````{warning}
+````
+`````{warning}
 You might get an error as follows:
+````{card}
+Terminal
+^^^
 ```
 ERROR: unable to locate a modulefile for gcc
 ```
 This can be safely ignored.
 ````
-`````
 ``````
+```````
 
 ## Basic Usage of `direnv`
-
 ```{eval-rst}
 ..  youtube:: OCBBqLwLeUc
 ```
 
-We will start with a basic demonstration of the `direnv` program. This is the
-same regardless of the machine you are on.
+We will start with a basic demonstration of the `direnv` program. 
+
+```{important}
+This is the same regardless of the machine you are on.
+```
 
 To begin, make a small demo directory where you can play around in and enter it:
 ```
@@ -139,7 +179,14 @@ whenever you enter this folder:
 ```
 $ direnv edit .
 ```
-Above, note that we had to specify the current working directory to tell `direnv` which folder should run special commands when entering or exiting it. You can also create this file manually:
+Above, note that we had to specify the current working directory to tell
+`direnv` which folder should run special commands when entering or exiting it.
+```{important}
+You need to have the `$EDITOR` variable set in your shell for `direnv edit .`
+to work correctly!
+```
+
+You can also create this file manually:
 ```
 $ vim .envrc
 ```
@@ -291,6 +338,17 @@ $ which python
 /global/AWIsoft/miniconda/4.10.3/bin/python
 ```
 ````
+## Summary
+You should now have an overview of the `direnv` program and how to use it to
+create isolated folders. On this page, you learned the following:
+
+* Setting up `direnv` on AWI's Ollie and DKRZ's Levante supercomputers.
+* Enabling `direnv` integration to your shell
+* Running specific commands when entering a folder
+* Setting up shell variables that are only active in a specific folder
+* Using the `layout` command provided by the `direnv` standard library to
+  enable per-directory Python environments
+
 
 ```{raw} html
 <script
@@ -303,3 +361,4 @@ $ which python
    crossorigin="anonymous"
 />
 ```
+
