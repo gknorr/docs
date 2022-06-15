@@ -204,7 +204,7 @@ Save and close the file.
 ````{hint}
 If you manually created this with `vim` or something similar, you will likely get a warning:
 ```
-...
+direnv: error ~/direnv_demos/.envrc is blocked. Run `direnv allow` to approve its content
 ```
 `direnv` keeps track of which "special" locations it knows about, and you need
 to enable the per-folder functionality. This can be done with:
