@@ -183,7 +183,7 @@ Above, note that we had to specify the current working directory to tell
 `direnv` which folder should run special commands when entering or exiting it.
 ```{important}
 You need to have the `$EDITOR` variable set in your shell for `direnv edit .`
-to work correctly!
+to work correctly (e.g. the command 'export EDITOR=vim' as line in your .bash_profile oder .bashrc file)!
 ```
 
 You can also create this file manually:
